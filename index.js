@@ -9,7 +9,10 @@ const cookieParser = require("cookie-parser")
 dotenv.config();
 const app = express();
 
-const whitelist = ['https://reyaly-books.herokuapp.com', 'http://localhost:3000']
+const whitelist = [
+  'https://reyaly-books.herokuapp.com', 
+  'http://localhost:3000', 
+  'https://reyaly-books.netlify.app']
 
 const corsOptions = {
   credentials: true,
