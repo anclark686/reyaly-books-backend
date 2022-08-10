@@ -14,6 +14,7 @@ const whitelist = ['https://reyaly-books.herokuapp.com', 'http:localhost:3000']
 const corsOptions = {
   credentials: true,
   origin: function (origin, callback) {
+    console.log(origin)
     if (whitelist.indexOf(origin) !== -1) {
       callback(null, true)
     } else {
