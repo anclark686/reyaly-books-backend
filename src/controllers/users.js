@@ -56,12 +56,13 @@ const Login = async(req, res) => {
             }
         });
         res.cookie('refreshToken', refreshToken,{
-            domain: 'reyaly-books.herokuapp.com',
+            domain: 'reyaly-books.com',
             httpOnly: true,
             sameSite: "none",
             secure: true,
             maxAge: 24 * 60 * 60 * 1000
         });
+        console.log(res.cookie)
         res.json({ accessToken });
     } catch (error) {
         res.status(404).json({msg:"Email not found"});
