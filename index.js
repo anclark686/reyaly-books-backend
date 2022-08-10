@@ -13,7 +13,8 @@ const whitelist = [
   'https://reyaly-books.herokuapp.com', 
   'http://localhost:3000', 
   'https://reyaly-books.netlify.app',
-  'https://main.d187hsax9x5cqn.amplifyapp.com']
+  'https://main.d187hsax9x5cqn.amplifyapp.com',
+  'https://www.reyaly-books.com']
 
 const corsOptions = {
   credentials: true,
