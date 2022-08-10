@@ -56,8 +56,10 @@ const Login = async(req, res) => {
             }
         });
         res.cookie('refreshToken', refreshToken,{
-            
+            domain: 'https://reyaly-books.herokuapp.com',
             httpOnly: true,
+            sameSite: "none",
+            secure: true,
             maxAge: 24 * 60 * 60 * 1000
         });
         res.json({ accessToken });
