@@ -23,7 +23,7 @@ let routes = (app) => {
   router.post('/users', user.Register);
   router.post('/login', user.Login);
   router.post('/token', refresh_token.refreshToken);
-  router.delete('/logout', user.Logout);
+  router.post('/logout', user.Logout);
 
   return app.use("/", router);
 };
