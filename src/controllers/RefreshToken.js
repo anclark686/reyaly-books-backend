@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken")
 
 const refreshToken = async(req, res) => {
     try {
-        const refreshToken = req.cookies.refreshToken
+        const refreshToken = req.body.refreshToken
         if(!refreshToken) {
             console.log(`AC Refresh Token: ${refreshToken}`)
             console.log(req.body)
