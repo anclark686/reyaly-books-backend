@@ -71,12 +71,14 @@ const Login = async(req, res) => {
  
 const Logout = async(req, res) => {
     const refreshToken = req.body.refreshToken;
+    console.log(refreshToken)
     if(!refreshToken) return res.sendStatus(204);
     const user = await Users.findAll({
         where:{
             refresh_token: refreshToken
         }
     });
+    console.log(user)
     if(!user[0]) return res.sendStatus(204);
     const userId = user[0].id;
     await Users.update({refresh_token: null},{
