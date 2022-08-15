@@ -7,7 +7,7 @@ const refreshToken = async(req, res) => {
         const refreshToken = req.cookies.refreshToken
         if(!refreshToken) {
             console.log(`AC Refresh Token: ${refreshToken}`)
-            console.log(req.cookies)
+            console.log(req.body)
             return res.sendStatus(401)}
         const user = await Users.findAll({
             where:{
