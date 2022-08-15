@@ -55,14 +55,15 @@ const Login = async(req, res) => {
                 id: userId
             }
         });
-        res.cookie("Authorization", "Bearer ", refreshToken,{
-            domain: 'reyaly-books.herokuapp.com',
-            httpOnly: true,
-            sameSite: "none",
-            secure: true,
-            maxAge: 24 * 60 * 60 * 1000
-        });
-        res.json({ accessToken });
+        res.send(refreshToken)
+        // res.cookie("Authorization", "Bearer ", refreshToken,{
+        //     domain: 'reyaly-books.herokuapp.com',
+        //     httpOnly: true,
+        //     sameSite: "none",
+        //     secure: true,
+        //     maxAge: 24 * 60 * 60 * 1000
+        // });
+        // res.json({ accessToken });
     } catch (error) {
         res.status(404).json({msg:"Email not found"});
     }
