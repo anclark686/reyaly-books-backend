@@ -56,7 +56,7 @@ const Login = async(req, res) => {
             }
         });
         res.cookie('refreshToken', refreshToken,{
-            domain: 'reyaly-books.com',
+            domain: 'reyaly-books.herokuapp.com',
             httpOnly: true,
             sameSite: "none",
             
