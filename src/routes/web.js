@@ -22,7 +22,7 @@ let routes = (app) => {
   router.get('/users', verifyToken.verifyToken, user.getUsers);
   router.post('/users', user.Register);
   router.post('/login', user.Login);
-  router.get('/token', refresh_token.refreshToken);
+  router.post('/token', refresh_token.refreshToken);
   router.delete('/logout', user.Logout);
 
   return app.use("/", router);
