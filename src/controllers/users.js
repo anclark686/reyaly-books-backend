@@ -55,11 +55,10 @@ const Login = async(req, res) => {
                 id: userId
             }
         });
-        res.cookie('refreshToken', refreshToken,{
+        res.cookie("Authorization", "Bearer ", refreshToken,{
             domain: 'reyaly-books.herokuapp.com',
             httpOnly: true,
             sameSite: "none",
-            
             secure: true,
             maxAge: 24 * 60 * 60 * 1000
         });
