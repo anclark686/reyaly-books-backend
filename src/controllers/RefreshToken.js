@@ -26,6 +26,7 @@ const refreshToken = async(req, res) => {
             res.json({ accessToken })
         })
     } catch (error) {
+        console.log(req)
         console.log(error)
     }
 }
