@@ -70,7 +70,7 @@ const Login = async(req, res) => {
 }
  
 const Logout = async(req, res) => {
-    const refreshToken = req.cookies.refreshToken;
+    const refreshToken = req.body.refreshToken;
     if(!refreshToken) return res.sendStatus(204);
     const user = await Users.findAll({
         where:{
